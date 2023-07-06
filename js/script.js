@@ -6,6 +6,7 @@ let seconds = document.querySelector(".seconds")
 let daytime = document.querySelector(".daytime")
 let copyButton = document.querySelector(".copy_btn")
 
+let placeholder = document.querySelector(".timestamp input").placeholder
 let convertInput = document.querySelector(".timestamp input")
 let convertBtn = document.querySelector(".convert")
 let table = document.querySelector("table")
@@ -41,13 +42,11 @@ function addZero(number){
 }
 
 copyButton.addEventListener("click", (event) => {
-    if(event.copyboard){
-        copyButton.innerText = "Copied!"
-        setTimeout(() => {
-            copyButton.innerText = "Copy"
-        }, 1000);
-        event.copyboard.writeText(secondsPassed.innerText)
-    }
+    copyButton.innerText = "Copied!"
+    setTimeout(() => {
+        copyButton.innerText = "Copy"
+    }, 1000);
+    event.copyboard.writeText(secondsPassed.innerText)
 })
 
 convertBtn.addEventListener("click", () => {
