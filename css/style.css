@@ -1,59 +1,138 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  font-family: "Roboto";
+}
+
+main {
+  max-width: 700px;
+  margin: 50px auto;
+}
+main h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+main .timestamp {
+  padding: 14px 0;
+}
+main .timestamp > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+}
+main .timestamp > div div {
+  max-width: 336px;
+}
+main .timestamp > div .enter {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+main .timestamp > div .enter .timestamps {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+main .timestamp > div .enter input {
+  font-family: arial;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 4.57142864px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  outline: none;
+  padding: 9.5px 14px;
+}
+main .timestamp > div .enter input:focus {
+  border: 1px solid rgba(0, 128, 255, 0.541);
+}
+main .timestamp > div .enter input::-moz-placeholder {
+  opacity: 0.6;
+}
+main .timestamp > div .enter input::placeholder {
+  opacity: 0.6;
+}
+main .timestamp > div .enter .info {
+  font-size: 14px;
+  color: #777777;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+main .timestamp > div .enter button {
+  width: 113px;
+  height: 36px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 4.57142864px;
+  background: #2185d0;
+}
+main .timestamp > div .enter button:hover {
+  cursor: pointer;
+}
+main .timestamp > div .now {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 25px;
-  height: 100vh;
-  font-family: Orbitron;
-  color: white;
-  background: black;
 }
-
-label {
-  font-size: 50px;
-  margin-right: 20px;
+main .timestamp > div .now .seconds_passed {
+  font-size: 56px;
+  font-weight: 400;
+  color: #1b1c1d;
 }
-label + div {
+main .timestamp > div .now p {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+}
+main .timestamp > div .now .time {
   display: flex;
   align-items: center;
-  gap: 15px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
-label + div input {
-  font-family: Orbitron;
-  font-size: 50px;
-  width: 450px;
-  height: 50px;
-  padding: 0 5px;
-}
-label + div input::-webkit-inner-spin-button {
-  display: none;
-}
-label + div button {
+main .timestamp > div .now button {
+  align-self: start;
   width: 70px;
-  height: 50px;
-  font-family: Orbitron;
-  font-size: 30px;
+  height: 33.5px;
+  font-size: 13px;
+  border: 1px solid black;
+  border-radius: 4.57142864px;
+  background: #fff;
 }
-
-.setted_time {
+main .timestamp > div .now button:hover {
+  cursor: pointer;
+}
+main .timestamp table {
   display: none;
-  font-family: Orbitron;
-  font-size: 60px;
+  font-size: 14px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.95);
+  box-sizing: border-box;
+  border-radius: 4.57142864px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 40px;
 }
-
-.clock {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 120px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+main .timestamp table tr {
+  box-sizing: border-box;
+  height: 43px;
+}
+main .timestamp table th {
+  width: 200px;
+  font-weight: 700;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  background: rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  padding: 11px;
+}
+main .timestamp table td {
+  width: 500px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-sizing: border-box;
+  padding: 11px;
 }/*# sourceMappingURL=style.css.map */

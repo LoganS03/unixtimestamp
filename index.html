@@ -4,27 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Clock</title>
+    <title>Unix Time Stamp - Epoch Converter</title>
 </head>
 <body>
-    <label for="time">Set your time:</label>
-    <div>
-        <input type="number" id="time">
-        <button type="button">Set</button>
-    </div>
-
-    <div class="setted_time">
-        <span>Your Time: </span>
-        <span class="your_time"></span>
-    </div>
-
-    <div class="clock">
-        <p class="hours"></p>
-        <span>:</span>
-        <p class="minutes"></p>
-        <span>:</span>
-        <p class="seconds"></p>
-    </div>
+    <main>
+        <h1>The Current Epoch Unix Timestamp</h1>
+        <div class="timestamp">
+            <div>
+                <div class="enter">
+                    <p class="timestamps">Enter a Timestamp</p>
+                    <input type="number" id="timestamps" placeholder="1688358083" min="0">
+                    <p class="info">Supports Unix timestamps in seconds, milliseconds, microseconds and nanoseconds.</p>
+                    <button type="button" class="convert">Convert →</button>
+                </div>
+    
+                <div class="now">
+                    <p class="seconds_passed"></p>
+                    <p>SECONDS SINCE JAN 01 1970. (UTC)</p>
+                    <div class="time">
+                        <p class="hours"></p>
+                        <span>:</span>
+                        <p class="minutes"></p>
+                        <span>:</span>
+                        <p class="seconds"></p>
+                        <p>&nbsp;</p>
+                        <p class="daytime"></p>
+                    </div>
+                    <button type="button" class="copy_btn">Copy</button>
+                </div>
+            </div>
+    
+            <table>
+                <tr class="format">
+                    <th>Format</th>
+                    <td></td>
+                </tr>
+                <tr class="GMT">
+                    <th>GMT</th>
+                    <td></td>
+                </tr>
+                <tr class="time_zone">
+                    <th>Your Time Zone</th>
+                    <td></td>
+                </tr>
+                <tr class="relative">
+                    <th>Relative</th>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </main>
 
     <script src="js/script.js"></script>
 </body>
