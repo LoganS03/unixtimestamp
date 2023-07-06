@@ -42,11 +42,13 @@ function addZero(number){
 }
 
 copyButton.addEventListener("click", (event) => {
-    copyButton.innerText = "Copied!"
-    setTimeout(() => {
-        copyButton.innerText = "Copy"
-    }, 1000);
-    event.copyboard.writeText(secondsPassed.innerText)
+    if(navigator.clipboard){
+        copyButton.innerText = "Copied!"
+        setTimeout(() => {
+            copyButton.innerText = "Copy"
+        }, 1000);
+        navigator.clipboard.writeText(secondsPassed.innerText)
+    }
 })
 
 convertBtn.addEventListener("click", () => {
